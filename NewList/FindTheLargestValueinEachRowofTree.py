@@ -15,7 +15,7 @@ def largestValue(root):
             result[level] = max(result[level],node.val)
 
         dfs(node.left,level+1)
-        dfs(node.righ,right+1)
+        dfs(node.righ,level+1)
 
     dfs(root,0)
     return result
